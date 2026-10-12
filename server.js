@@ -6,7 +6,9 @@ const fetch = require("node-fetch");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: ["https://flameburni.github.io"]
+}));
 app.use(express.json());
 
 app.post("/contact", async function(req,res) {
