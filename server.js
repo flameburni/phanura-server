@@ -78,8 +78,10 @@ app.post("/contact", async function(req,res) {
    }
 });
 
-app.listen(3000, function() {
-    console.log("Phanura server running on port 3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, function() {
+    console.log("Phanura server running on port " + PORT);
 });
 
 
